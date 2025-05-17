@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d2d3fbe-52a2-43ae-9392-f115d24eee81" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/queenfolio.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gallery/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gallery/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/gallery/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/gallery/upload_photo.html" afterDir="false" />
-    </list>
+    <list default="true" id="4d2d3fbe-52a2-43ae-9392-f115d24eee81" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,6 +78,7 @@
       <workItem from="1747481718929" duration="7341000" />
       <workItem from="1747491319330" duration="1371000" />
       <workItem from="1747492711103" duration="845000" />
+      <workItem from="1747493570769" duration="318000" />
     </task>
     <servers />
   </component>

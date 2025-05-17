@@ -13,23 +13,28 @@
             color: #eee;
             font-family: 'Playfair Display', serif;
         }
+
         header, section, footer {
             padding: 80px 20px;
             text-align: center;
         }
+
         h1 {
             font-size: 48px;
             margin-bottom: 10px;
         }
+
         h2 {
             font-size: 32px;
             margin-bottom: 20px;
         }
+
         p {
             font-size: 18px;
             max-width: 600px;
             margin: 0 auto 20px;
         }
+
         .gallery {
             display: flex;
             flex-wrap: wrap;
@@ -37,21 +42,25 @@
             gap: 30px;
             margin-top: 40px;
         }
+
         .gallery img {
             width: 280px;
             height: auto;
             border-radius: 8px;
             border: 1px solid #333;
         }
+
         footer {
             background-color: #111;
             font-size: 14px;
             padding: 60px 20px;
         }
+
         a {
             color: #ccc;
             text-decoration: none;
         }
+
         a:hover {
             color: #fff;
         }
@@ -62,18 +71,26 @@
 <header>
     <h1>ЕЛИЗАВЕТА БОЖОК</h1>
     <p>Фотограф, Бильд-редактор, Оператор комп.графики.</p>
-    <a href="{% url 'upload' %}" style="display: inline-block; margin-top: 20px; padding: 10px 20px; border: 1px solid #eee; border-radius: 6px; color: #eee;">Загрузить фото</a>
+    <a href="{% url 'upload' %}"
+       style="display: inline-block; margin-top: 20px; padding: 10px 20px; border: 1px solid #eee; border-radius: 6px; color: #eee;">Загрузить
+        фото</a>
 </header>
 
 <section id="portfolio">
     <h2>МОИ РАБОТЫ</h2>
     <div class="gallery">
         {% for photo in photos %}
-            <div>
-                <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
-            </div>
+        <div>
+            <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
+            <h3>{{ photo.title }}</h3>
+            <p>{{ photo.description }}</p>
+            <form method="post" action="{% url 'delete_photo' photo.id %}" style="margin-top:10px;">
+                {% csrf_token %}
+                <button type="submit" onclick="return confirm('Удалить это фото?')">Удалить</button>
+            </form>
+        </div>
         {% empty %}
-            <p>Пока нет загруженных фотографий.</p>
+        <p>Пока нет загруженных фотографий.</p>
         {% endfor %}
     </div>
 </section>

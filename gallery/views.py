@@ -3,6 +3,7 @@ from .models import Photo
 from django.utils import timezone
 from .forms import PhotoForm
 from django.shortcuts import redirect
+from django.shortcuts import get_object_or_404
 
 def home(request):
     photos = Photo.objects.all()
@@ -21,3 +22,11 @@ def upload_photo(request):
     else:
         form = PhotoForm()
     return render(request, 'gallery/upload_photo.html', {'form': form})
+
+
+def delete_photo(request, photo_id):
+    photo = get_object_or_404(Photo, id=photo_id)
+    if request.method == 'POST':
+        photo.delete()
+        return redirect('home')
+    return render(request, 'gallery/delete_photo.html', {'photo':photo})

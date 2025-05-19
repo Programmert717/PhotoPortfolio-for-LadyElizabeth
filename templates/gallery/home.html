@@ -5,13 +5,25 @@
     <meta charset="UTF-8">
     <title>Елизавета - Портфолио</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            background-color: #0a0a0a;
+            background: url("{% static 'img/liza-bg.jpg' %}") no-repeat center center fixed;
+            background-size: cover;
             color: #eee;
             font-family: 'Playfair Display', serif;
+            position: relative;
+            z-index: 0;
+        }
+
+        /* затемнение поверх фона */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
         }
 
         header, section, footer {
@@ -51,7 +63,7 @@
         }
 
         footer {
-            background-color: #111;
+            background-color: rgba(0, 0, 0, 0.8);
             font-size: 14px;
             padding: 60px 20px;
         }
@@ -64,6 +76,25 @@
         a:hover {
             color: #fff;
         }
+
+        .delete-button {
+            margin-top: 10px;
+            background-color: #1a1a1a;
+            color: #eee;
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 16px;
+            padding: 8px 16px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .delete-button:hover {
+            background-color: #500909;
+            box-shadow: 0 0 10px #8b0000;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -72,8 +103,9 @@
     <h1>ЕЛИЗАВЕТА БОЖОК</h1>
     <p>Фотограф, Бильд-редактор, Оператор комп.графики.</p>
     <a href="{% url 'upload' %}"
-       style="display: inline-block; margin-top: 20px; padding: 10px 20px; border: 1px solid #eee; border-radius: 6px; color: #eee;">Загрузить
-        фото</a>
+       style="display: inline-block; margin-top: 20px; padding: 10px 20px; border: 1px solid #eee; border-radius: 6px; color: #eee;">
+        Загрузить фото
+    </a>
 </header>
 
 <section id="portfolio">
@@ -82,12 +114,13 @@
         {% for photo in photos %}
         <div>
             <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
-            <h3>{{ photo.title }}</h3>
-            <p>{{ photo.description }}</p>
-            <form method="post" action="{% url 'delete_photo' photo.id %}" style="margin-top:10px;">
+
+            {% if user.is_authenticated %}
+            <form action="{% url 'delete_photo' photo.pk %}" method="post">
                 {% csrf_token %}
-                <button type="submit" onclick="return confirm('Удалить это фото?')">Удалить</button>
+                <button type="submit" class="delete-button">Удалить</button>
             </form>
+            {% endif %}
         </div>
         {% empty %}
         <p>Пока нет загруженных фотографий.</p>
@@ -97,9 +130,9 @@
 
 <footer id="contact">
     <h2>Контакты</h2>
-    <p>Телефон: +375259084326 </p>
+    <p>Телефон: +375259084326</p>
     <p>Instagram: <a href="https://www.instagram.com/morfo_liz/" target="_blank">@morfo_liz</a></p>
-    <p>Telegram: @morfoliz </p>
+    <p>Telegram: @morfoliz</p>
     <p style="margin-top: 40px; font-size: 12px;">&copy; 2006-2025 | Lizochka Inc. Все права защищены.</p>
 </footer>
 

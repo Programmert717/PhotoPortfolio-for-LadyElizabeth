@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d2d3fbe-52a2-43ae-9392-f115d24eee81" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/gallery/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/queenfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/queenfolio/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queenfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/queenfolio/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/gallery/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gallery/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,6 +88,10 @@
       <workItem from="1747501849957" duration="1491000" />
       <workItem from="1747671481895" duration="2007000" />
       <workItem from="1747673739740" duration="1225000" />
+      <workItem from="1747674983571" duration="84000" />
+      <workItem from="1747762041576" duration="556000" />
+      <workItem from="1747762611185" duration="241000" />
+      <workItem from="1747762884862" duration="31000" />
     </task>
     <servers />
   </component>

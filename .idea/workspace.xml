@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d2d3fbe-52a2-43ae-9392-f115d24eee81" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queenfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/queenfolio/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +93,7 @@
       <workItem from="1747762924744" duration="1547000" />
       <workItem from="1748073721459" duration="771000" />
       <workItem from="1748338256178" duration="510000" />
-      <workItem from="1748338780470" duration="1074000" />
+      <workItem from="1748338780470" duration="1772000" />
     </task>
     <servers />
   </component>

@@ -7,7 +7,6 @@
     <list default="true" id="4d2d3fbe-52a2-43ae-9392-f115d24eee81" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/queenfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/queenfolio/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queenfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/queenfolio/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +90,10 @@
       <workItem from="1747762041576" duration="556000" />
       <workItem from="1747762611185" duration="241000" />
       <workItem from="1747762884862" duration="31000" />
-      <workItem from="1747762924744" duration="1033000" />
+      <workItem from="1747762924744" duration="1547000" />
+      <workItem from="1748073721459" duration="771000" />
+      <workItem from="1748338256178" duration="510000" />
+      <workItem from="1748338780470" duration="1074000" />
     </task>
     <servers />
   </component>

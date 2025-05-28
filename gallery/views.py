@@ -11,7 +11,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 def home(request):
     photos = Photo.objects.all()
-    return render(request, 'gallery/home.html', {
+    return render(request, 'home.html', {
         'photos': photos,
         'now': timezone.now(),
     })

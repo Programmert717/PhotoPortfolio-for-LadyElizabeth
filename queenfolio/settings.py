@@ -133,3 +133,7 @@ LOGIN_REDIRECT_URL = '/'
 
 ALLOWED_HOSTS = ['*']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://web-production-622d4.up.railway.app/",
+]
